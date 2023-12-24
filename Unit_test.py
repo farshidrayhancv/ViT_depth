@@ -1,8 +1,8 @@
 
 import unittest
 import torch
-from RGBD_ObjDet_mcls_helper import MultiObjectDetectionViT
-from RGBD_ObjDet_helper import ObjectDetectionViT
+from src.RGBD_ObjDet_mcls_helper import MultiObjectDetectionViT
+from src.RGBD_ObjDet_helper import ObjectDetectionViT
 
 
 class TestMultiObjectDetectionViT(unittest.TestCase):

@@ -1,4 +1,4 @@
-from RGBD_ObjDet_helper import ObjectDetectionViT, RandomObjectDetectionDataset 
+from src.RGBD_ObjDet_helper import ObjectDetectionViT, RandomObjectDetectionDataset 
 import torch
 import torch.nn as nn
 import torch.optim as optim

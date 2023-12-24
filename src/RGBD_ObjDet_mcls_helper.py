@@ -7,7 +7,7 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import transforms
 import matplotlib.pyplot as plt
 import numpy as np
-from TransformerBlock import TransformerBlock
+from src.TransformerBlock import TransformerBlock
 
 
 # Modify the model for multi-object detection

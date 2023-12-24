@@ -3,10 +3,10 @@ import torch.nn as nn
 import torchvision.transforms as transforms
 import matplotlib.pyplot as plt
 import numpy as np
-from TransformerBlock import TransformerBlock
+from src.TransformerBlock import TransformerBlock
+from torch.utils.data import Dataset
 
 # Define the RGBD Vision Transformer model
-
 
 class RGBDViT(nn.Module):
     def __init__(self, channels, image_size, embed_size, num_heads, num_classes, depth_channels=1, dropout=0.5):

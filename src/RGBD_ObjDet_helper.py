@@ -5,7 +5,7 @@ import torch.nn as nn
 from torchvision import transforms
 import matplotlib.pyplot as plt
 import numpy as np
-from TransformerBlock import TransformerBlock
+from src.TransformerBlock import TransformerBlock
 from torch.utils.data import Dataset
 
 

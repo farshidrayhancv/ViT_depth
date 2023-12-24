@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import transforms
 import matplotlib.pyplot as plt
 import numpy as np
-from RGBD_ObjDet_mcls_helper import MultiObjectDetectionViT, RandomMultiObjectDetectionDataset
+from src.RGBD_ObjDet_mcls_helper import MultiObjectDetectionViT, RandomMultiObjectDetectionDataset
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

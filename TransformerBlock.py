@@ -1,10 +1,6 @@
-import torch
 import torch.nn as nn
-import torchvision.transforms as transforms
-from torch.utils.data import DataLoader, Dataset
-from torchvision import datasets
-
 # Define a basic transformer block
+
 class TransformerBlock(nn.Module):
     def __init__(self, embed_size, heads, dropout=0.1):
         super(TransformerBlock, self).__init__()

@@ -61,4 +61,4 @@ For each stage of the RGBDViT, ObjectDetectionViT, and MultiObjectDetectionViT m
    - Output Sequence Shape: (batch_size, 1, sequence_length)
    - Output Sequence Size: sequence_length
 
-Please note that the specific values for `batch_size`, `height`, `width`, `sequence_length`, and `embedding_size` will depend on the specific implementation and configuration of the models.
+Please note that the we use values from original Vit for `batch_size`, `height`, `width`, `sequence_length`, and `embedding_size` will depend on the specific implementation and configuration of the models.

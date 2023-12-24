@@ -3,6 +3,7 @@ ViT Test code for CV tasks with depth/4th channel with random data
 
 
 Sample Data for Multi class Ojb Det (upto 5 classes)
+![multi_class_objdet_data](https://github.com/farshidrayhanuiu/ViT_depth/blob/main/etc/multi_class_objdet_data.png)
 
 
 Flatten and Concatenate:

@@ -32,3 +32,5 @@ After the transformer blocks, global average pooling is applied to the output se
 Finally, the pooled output is passed through fully connected layers to produce predictions for bounding boxes and class scores.
 
 Please refer to the code in this repository for more details on the implementation.
+
+The pooled output is then passed through fully connected layers (self.fc_bbox and self.fc_class) to produce predictions for bounding boxes and class scores.

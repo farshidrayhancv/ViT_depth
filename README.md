@@ -1,3 +1,15 @@
+"""
+This file contains unit tests for the project.
+
+It provides a set of test cases to verify the functionality of the project's code. Each test case is designed to test a specific aspect of the code and ensure that it behaves as expected.
+
+The unit tests are implemented using the Python `unittest` framework, which provides a convenient way to define and run tests. Each test case is defined as a subclass of `unittest.TestCase` and contains one or more test methods that perform the actual testing.
+
+Future Features:
+- Add additional test cases to cover more scenarios and edge cases.
+- Implement test fixtures to set up and tear down test environments.
+- Integrate with a continuous integration system to automatically run tests on code changes.
+"""
 # ViT_depth
 
 This repository contains code for testing the Vision Transformer (ViT) model with depth/4th channel for three different tasks:
@@ -63,4 +75,14 @@ For each stage of the RGBDViT, ObjectDetectionViT, and MultiObjectDetectionViT m
 
 Please note that the we use values from original Vit for `batch_size`, `height`, `width`, `sequence_length`, and `embedding_size` will depend on the specific implementation and configuration of the models.
 
+
+This repo also provides a set of test cases to verify the functionality of the project's code. Each test case is designed to test a specific aspect of the code and ensure that it behaves as expected.
+
+The unit tests are implemented using the Python `unittest` framework, which provides a convenient way to define and run tests. Each test case is defined as a subclass of `unittest.TestCase` and contains one or more test methods that perform the actual testing.
+
+Future Features:
+- Add additional test cases to cover more scenarios and edge cases.
+- Implement test fixtures to set up and tear down test environments.
+- Integrate with a continuous integration system to automatically run tests on code changes.
+"""
 

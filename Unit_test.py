@@ -66,8 +66,6 @@ class TestObjectDetectionViT(unittest.TestCase):
         dummy_rgb = dummy_rgb.to(self.device)
         dummy_depth = dummy_depth.to(self.device)
 
-
-
         with torch.no_grad():
             bbox_preds, class_preds = self.model(dummy_rgb, dummy_depth)
 

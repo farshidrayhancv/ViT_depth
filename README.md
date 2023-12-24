@@ -21,7 +21,9 @@ The repository provides sample data for each task. Here are the sample images:
 
 ## Model Architecture
 
-The input images are preprocessed by flattening and concatenating the RGB and depth channels into a single vector. This vector represents the input sequence of tokens.
+### RGBDViT
+
+The RGBDViT model takes RGB and depth images as input. The input images are preprocessed by flattening and concatenating the RGB and depth channels into a single vector. This vector represents the input sequence of tokens.
 
 The concatenated vector is then passed through an embedding layer to project it into the desired embedding size, capturing important features from the input sequence.
 
@@ -29,8 +31,30 @@ The embedded sequence is reshaped to have dimensions (batch_size, 1, sequence_le
 
 After the transformer blocks, global average pooling is applied to the output sequence, aggregating information from different positions and reducing the sequence length to 1.
 
+Finally, the pooled output is passed through fully connected layers to produce predictions for image classification.
+
+### ObjectDetectionViT
+
+The ObjectDetectionViT model is designed for single object detection. It takes an RGB image as input. The input image is preprocessed by flattening it into a single vector.
+
+The vector is then passed through an embedding layer to project it into the desired embedding size, capturing important features from the input image.
+
+The embedded vector is reshaped to have dimensions (batch_size, 1, sequence_length) and passed through a series of transformer blocks. These blocks allow each position to attend to other positions, processing the sequence.
+
+After the transformer blocks, global average pooling is applied to the output sequence, aggregating information from different positions and reducing the sequence length to 1.
+
+Finally, the pooled output is passed through fully connected layers to produce predictions for bounding boxes and class scores.
+
+### MultiObjectDetectionViT
+
+The MultiObjectDetectionViT model is designed for multi-object detection. It takes an RGB image as input. The input image is preprocessed by flattening it into a single vector.
+
+The vector is then passed through an embedding layer to project it into the desired embedding size, capturing important features from the input image.
+
+The embedded vector is reshaped to have dimensions (batch_size, 1, sequence_length) and passed through a series of transformer blocks. These blocks allow each position to attend to other positions, processing the sequence.
+
+After the transformer blocks, global average pooling is applied to the output sequence, aggregating information from different positions and reducing the sequence length to 1.
+
 Finally, the pooled output is passed through fully connected layers to produce predictions for bounding boxes and class scores.
 
 Please refer to the code in this repository for more details on the implementation.
-
-The pooled output is then passed through fully connected layers (self.fc_bbox and self.fc_class) to produce predictions for bounding boxes and class scores.

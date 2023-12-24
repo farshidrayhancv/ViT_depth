@@ -1,5 +1,18 @@
 # ViT_depth
-ViT Test code for CV tasks with depth/4th channel with random data
+ViT Test code for 3 tasks with depth/4th channel with random data.
+
+The code of this repo is is to modify Vit for depth clannel for the task of 
+Image Classification
+Single Object detection
+Multi Object detection
+
+
+Sample Data for single RGBD image from random noise with depth
+![multi_class_objdet_data](https://github.com/farshidrayhanuiu/ViT_depth/blob/main/etc/RGBD_random_noise_image_sample.png)
+
+
+Sample Data for single class Ojb Det 
+![multi_class_objdet_data](https://github.com/farshidrayhanuiu/ViT_depth/blob/main/etc/single_class_objdet_data.png.png)
 
 
 Sample Data for Multi class Ojb Det (upto 5 classes)

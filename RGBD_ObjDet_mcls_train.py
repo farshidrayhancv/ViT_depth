@@ -2,19 +2,20 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import DataLoader
 from torchvision import transforms
-import matplotlib.pyplot as plt
-import numpy as np
 from src.RGBD_ObjDet_mcls_helper import MultiObjectDetectionViT, RandomMultiObjectDetectionDataset
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-multi_object_detection_dataset = RandomMultiObjectDetectionDataset(num_samples=100, max_objects=5, image_size=224, num_classes=10, transform=transforms.ToTensor())
-dataloader_multi_object = DataLoader(multi_object_detection_dataset, batch_size=8, shuffle=True)
+multi_object_detection_dataset = RandomMultiObjectDetectionDataset(
+    num_samples=100, max_objects=5, image_size=224, num_classes=10, transform=transforms.ToTensor())
+dataloader_multi_object = DataLoader(
+    multi_object_detection_dataset, batch_size=8, shuffle=True)
 
 # Instantiate the model and move it to the device
-multi_object_detection_model = MultiObjectDetectionViT(channels=3, image_size=224, embed_size=256, num_heads=8, num_classes=10, max_objects=5, depth_channels=1)
+multi_object_detection_model = MultiObjectDetectionViT(
+    channels=3, image_size=224, embed_size=256, num_heads=8, num_classes=10, max_objects=5, depth_channels=1)
 multi_object_detection_model.to(device)
 
 # Define loss function and optimizer
@@ -34,7 +35,8 @@ for epoch in range(num_epochs):
     running_loss_class = 0.0
 
     for rgb, depth, bboxes, labels in dataloader_multi_object:
-        rgb, depth, bboxes, labels = rgb.to(device), depth.to(device), bboxes.to(device), labels.to(device)
+        rgb, depth, bboxes, labels = rgb.to(device), depth.to(
+            device), bboxes.to(device), labels.to(device)
 
         bboxes = bboxes.float()
         # Forward pass

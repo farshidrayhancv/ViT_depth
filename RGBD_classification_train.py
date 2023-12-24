@@ -4,12 +4,6 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, Dataset
 from torchvision import transforms
-# import matplotlib.pyplot as plt
-# import numpy as np
-# import torch.optim as optim
-# from torch.utils.data import DataLoader, Dataset
-# from torchvision import transforms
-# from RGBD_classification_helper import RGBDViT, RandomRGBDDataset, visualize_sample
 
 
 class RandomRGBDDataset(Dataset):

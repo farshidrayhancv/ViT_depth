@@ -1,10 +1,10 @@
 # ViT_depth
 ViT Test code for 3 tasks with depth/4th channel with random data.
 
-The code of this repo is is to modify Vit for depth clannel for the task of 
+The code of this repo is to modify Vit for depth channel for the task of \n
 Image Classification
 Single Object detection
-Multi Object detection
+Multi-Object detection
 
 
 Sample Data for single RGBD image from random noise with depth
